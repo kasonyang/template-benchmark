@@ -13,6 +13,9 @@ import org.junit.Test;
 import com.mitchellbosecke.pebble.error.PebbleException;
 
 import freemarker.template.TemplateException;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -79,6 +82,13 @@ public class ExpectedOutputTest {
         Handlebars hbs = new Handlebars();
         hbs.setup();
         assertOutput(hbs.benchmark());
+    }
+    
+    @Test
+    public void testTemperaOutput() throws Exception{
+      Tempera tplx = new Tempera();
+      tplx.setup();
+      assertOutput(tplx.benchmark());
     }
 
     private void assertOutput(final String output) throws IOException {
